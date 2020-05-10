@@ -1,0 +1,32 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname ex43) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+; TODO: exercise 43
+; An AnimationState is a Number;
+; interpretation: the number of clock ticks
+; since the animation started
+
+; Number -> Number
+; increases the time in the simulation
+(define (tock AnimationState)
+  (add1 AnimationState))
+
+(check-expect (tock 190) 191)
+(check-expect (tock 19) 20)
+
+; AnimationState -> Image
+; places image on background according
+; to current value of the timer
+(define (render AnimationState)
+  (place-image CAR AnimationState Y-CAR BACKGROUND))
+
+; AnimationState -> Boolean
+; afer each event, big-bang evaluates (end? AnimationState)
+(define (end? AnimationState)
+  ...)
+
+(define (main AnimationState)
+  (big-bang AnimationState
+    [on-tick tock]
+    [to-draw render]
+    [stop-when end?]))
