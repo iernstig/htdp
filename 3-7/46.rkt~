@@ -294,7 +294,7 @@
 ) 0 0 4 29 1 #"\n"
 0 0 4 3 174
 (6
- #"#reader(lib \"htdp-beginner-reader.ss\" \"lang\")((modname |45|) (re"
+ #"#reader(lib \"htdp-beginner-reader.ss\" \"lang\")((modname |46|) (re"
  #"ad-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructo"
  #"r repeating-decimal #f #t none #f () #f)))"
 ) 0 0 4 29 1 #"\n"
@@ -1236,7 +1236,8 @@
 0 0 24 29 1 #"\n"
 0 0 17 3 22 #"; WorldState -> Number"
 0 0 24 29 1 #"\n"
-0 0 17 3 44 #"; calculate the x-position of cat given time"
+0 0 17 3 26 #"; calculate the x-position"
+0 0 17 3 18 #" of cat given time"
 0 0 24 29 1 #"\n"
 0 0 17 3 50 #"; if cat is outside of bounds, move to start again"
 0 0 24 29 1 #"\n"
@@ -1273,8 +1274,7 @@
 0 0 17 3 12 #"check-expect"
 0 0 17 3 2 #" ("
 0 0 17 3 9 #"x-pos-cat"
-0 0 17 3 1 #" "
-0 0 17 3 9 #"500) 100)"
+0 0 17 3 10 #" 500) 100)"
 0 0 24 29 1 #"\n"
 0 0 24 3 1 #" "
 0 0 24 29 1 #"\n"
